@@ -1,11 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ribeye:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rochester:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inspiration:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap");
 body {
   margin: 0;
   line-height: normal;
@@ -17,44 +20,49 @@ body {
   --font-assistant: Assistant;
   --font-roboto: Roboto;
   --font-arial: Arial;
+  --font-segoe-ui: "Segoe UI";
   --font-dm-sans: "DM Sans";
-  --font-encode-sans-semi-expanded: "Encode Sans Semi Expanded";
   --font-inter: Inter;
+  --font-inspiration: Inspiration;
+  --font-lexend-deca: "Lexend Deca";
+  --font-montserrat: Montserrat;
 
   /* font sizes */
   --font-size-xl: 20px;
   --font-size-17xl: 36px;
   --font-size-sm: 14px;
-  --font-size-xs: 12px;
-  --font-size-21xl: 40px;
   --font-size-5xl: 24px;
+  --font-size-21xl: 40px;
+  --font-size-3xl: 22px;
   --font-size-lg: 18px;
-  --font-size-base: 16px;
-  --font-size-41xl: 60px;
   --font-size-16xl: 35px;
   --font-size-6xl: 25px;
-  --font-size-mid: 17px;
-  --font-size-3xl: 22px;
-  --font-size-8xl: 27px;
-  --font-size-smi: 13px;
+  --font-size-41xl: 60px;
+  --font-size-base: 16px;
 
   /* Colors */
   --color-mintcream-100: #fdfff8;
+  --color-mintcream-200: #f3faf8;
   --color-black: #000;
-  --color-white: #fff;
+  --white: #fff;
+  --color-dodgerblue: #0081fe;
   --color-slateblue-100: #113fc0;
   --color-slateblue-200: #113aa9;
   --color-lightsteelblue: #bfdbfe;
   --color-darkslategray-100: #474543;
-  --color-darkslategray-200: #333;
+  --color-darkslategray-200: #224957;
+  --color-darkslategray-300: #333;
   --color-darkgray: #969696;
+  --color-whitesmoke-100: #e6edea;
+  --color-darkslateblue: #132b71;
   --color-yellowgreen: #8cc541;
-  --color-darkolivegreen: #004318;
-  --color-whitesmoke: #e6edea;
   --color-lightgoldenrodyellow: #d3fcc4;
-  --color-lightgray: #ccc;
   --color-deepskyblue: #13b3e8;
+  --color-darkolivegreen: #004318;
+  --color-lightgray: #ccc;
+  --color-mediumspringgreen: #20df7f;
 
   /* Border radiuses */
   --br-xl: 20px;
+  --br-3xs: 10px;
 }

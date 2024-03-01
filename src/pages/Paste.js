@@ -5,123 +5,84 @@ import "./Paste.css";
 const Paste = () => {
   const navigate = useNavigate();
 
-  const onArrowLeftCircleIconClick = useCallback(() => {
-    navigate("/");
+  const onRectangleImageClick = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='rectangleImage1']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
+  const onRectangleImage1Click = useCallback(() => {
+    const anchor = document.querySelector("[data-scroll-to='rectangleImage']");
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
+  const onAboutUsTextClick = useCallback(() => {
+    navigate("/about");
   }, [navigate]);
 
-  const onBaisiyouInkTextClick = useCallback(() => {
-    navigate("/");
+  const onContactUsTextClick = useCallback(() => {
+    navigate("/login");
+  }, [navigate]);
+
+  const onAboutUsText2Click = useCallback(() => {
+    navigate("/about");
+  }, [navigate]);
+
+  const onInkTextClick = useCallback(() => {
+    navigate("/ink");
+  }, [navigate]);
+
+  const onRefillsTextClick = useCallback(() => {
+    navigate("/refill");
+  }, [navigate]);
+
+  const onPenTextClick = useCallback(() => {
+    navigate("/pen");
   }, [navigate]);
 
   return (
-    <div className="paste1">
-      <div className="image19" />
-      <div className="image20" />
-      <div className="image21" />
-      <div className="image22" />
-      <div className="image23" />
-      <div className="image24" />
-      <div className="image25" />
-      <div className="image26" />
-      <div className="image27" />
-      <div className="image28" />
-      <div className="image29" />
-      <div className="image30" />
-      <div className="image31" />
-      <div className="image32" />
-      <div className="image33" />
-      <div className="image34" />
-      <div className="rectangle105" />
-      <div className="rectangle106" />
-      <div className="rectangle107" />
-      <div className="rectangle108" />
-      <div className="rectangle109" />
-      <div className="rectangle110" />
-      <div className="rectangle111" />
-      <div className="rectangle112" />
-      <div className="rectangle113" />
-      <div className="rectangle114" />
-      <div className="rectangle115" />
-      <div className="rectangle-wrapper">
-        <div className="rectangle116" />
+    <div className="paste4">
+      <div className="paste-child" />
+      <div className="rectangle-parent2">
+        <img
+          className="frame-child9"
+          alt=""
+          src="/rectangle-125@2x.png"
+          data-scroll-to="rectangleImage"
+          onClick={onRectangleImageClick}
+        />
+        <img
+          className="frame-child10"
+          alt=""
+          src="/rectangle-126@2x.png"
+          data-scroll-to="rectangleImage1"
+          onClick={onRectangleImage1Click}
+        />
+        <img className="image-1-icon4" alt="" src="/image-1@2x.png" />
       </div>
-      <div className="rectangle117" />
-      <div className="rectangle117" />
-      <img className="rectangle-icon3" alt="" src="/rectangle4.svg" />
-      <div className="pigments-by-color">Pigments by Color</div>
-      <div className="pigment-paste-wrapper">
-        <div className="pigment-paste">{`Pigment Paste `}</div>
-      </div>
-      <div className="black-pigment">Black Pigment</div>
-      <div className="blue-pigment">Blue Pigment</div>
-      <div className="green-pigment">Green Pigment</div>
-      <div className="pink-pigment">Pink Pigment</div>
-      <div className="yellow-pigment">Yellow Pigment</div>
+      <div className="rectangle50" />
+      <div className="rectangle51" />
+      <div className="rectangle52" />
+      <div className="rectangle53" />
+      <div className="rectangle54" />
+      <div className="rectangle55" />
+      <div className="rectangle56" />
+      <div className="rectangle57" />
       <div className="category">Category</div>
       <div className="price">Price</div>
       <div className="pigment-type">Pigment Type</div>
       <div className="particle-size">Particle Size</div>
       <div className="health-safety">{`Health & Safety`}</div>
-      <div className="component-32">
-        <div className="rectangle119" />
-        <img className="background-icon2" alt="" src="/background.svg" />
-        <div className="component-3-child2" />
-        <div className="about-us4">About us</div>
-        <div className="privacy-policy3">Privacy Policy</div>
-        <div className="contact-us4">Contact us</div>
-        <div className="help3">Help</div>
-        <div className="copyright-20183">
-          Copyright © 2024 • Baisiyou Ink Inc.
-        </div>
-        <img
-          className="youtube-color1-icon3"
-          alt=""
-          src="/youtube-color1@2x.png"
-        />
-        <img
-          className="linkedin-black1-icon3"
-          alt=""
-          src="/linkedin-black1@2x.png"
-        />
-        <div className="facebook-black13">
-          <div className="rectangle120" />
-          <img className="facebook-icon3" alt="" src="/facebook.svg" />
-        </div>
-        <div className="twitter-black13">
-          <div className="rectangle120" />
-          <img className="twitter-icon3" alt="" src="/twitter.svg" />
-        </div>
-        <div className="social-media3">Social Media</div>
-        <div className="faulconer-drive3">
-          345 Faulconer Drive, Suite 4 • Charlottesville, Canada, 12345
-        </div>
-        <img
-          className="round-place-24px-icon3"
-          alt=""
-          src="/roundplace24px@2x.png"
-        />
-        <div className="phone3">
-          <div className="div3">(123) 456-7890</div>
-          <img
-            className="round-phone-24px-icon3"
-            alt=""
-            src="/roundphone24px.svg"
-          />
-        </div>
-        <img
-          className="round-local-printshop-24px-icon3"
-          alt=""
-          src="/roundlocalprintshop24px@2x.png"
-        />
-        <div className="component-3-child3" />
-        <img className="logo-lift-icon2" alt="" src="/logo-lift.svg" />
-      </div>
-      <img className="paste-child" alt="" src="/rectangle-81@2x.png" />
-      <img className="paste-item" alt="" src="/rectangle-82@2x.png" />
-      <img className="paste-inner" alt="" src="/rectangle-83@2x.png" />
-      <img className="paste-child1" alt="" src="/rectangle-84@2x.png" />
-      <img className="paste-child2" alt="" src="/rectangle-85@2x.png" />
-      <img className="paste-child3" alt="" src="/rectangle-86@2x.png" />
+      <img className="paste-item" alt="" src="/rectangle-81@2x.png" />
+      <img className="paste-inner" alt="" src="/rectangle-82@2x.png" />
+      <img className="paste-child1" alt="" src="/rectangle-83@2x.png" />
+      <img className="paste-child2" alt="" src="/rectangle-84@2x.png" />
+      <img className="paste-child3" alt="" src="/rectangle-85@2x.png" />
+      <img className="paste-child4" alt="" src="/rectangle-86@2x.png" />
+      <div className="paste-child5" />
       <div className="the-particle-size">
         The particle size of the thermal-sensitive pigment employed within the
         pen measures less than 0.8 micrometers, underscoring its meticulous
@@ -133,24 +94,109 @@ const Paste = () => {
         trace of residual coloration, thereby maintaining the integrity of the
         writing surface.
       </div>
-      <div className="red-pigment">Red Pigment</div>
-      <div className="image35" />
-      <div className="insilico1">Insilico</div>
-      <div className="contact-us5">Contact Us</div>
-      <div className="location1">Location</div>
-      <img className="layer-1-2-icon" alt="" src="/layer-12.svg" />
-      <div className="image36" />
-      <img className="image-1-icon2" alt="" src="/image-11@2x.png" />
-      <div className="paste-child4" />
-      <img
-        className="arrow-left-circle-icon1"
-        alt=""
-        src="/arrowleftcircle1.svg"
-        onClick={onArrowLeftCircleIconClick}
-      />
-      <img className="paste-child5" alt="" src="/rectangle-12@2x.png" />
-      <div className="baisiyou-ink2" onClick={onBaisiyouInkTextClick}>
-        Baisiyou Ink
+      <img className="paste-child6" alt="" src="/rectangle-109@2x.png" />
+      <img className="paste-child7" alt="" src="/rectangle-111@2x.png" />
+      <img className="paste-child8" alt="" src="/rectangle-112@2x.png" />
+      <img className="paste-child9" alt="" src="/rectangle-113@2x.png" />
+      <div className="paste-child10" />
+      <div className="footer-ui4">
+        <div className="footer-ui-child6" />
+        <div className="about-us9" onClick={onAboutUsTextClick}>
+          About us
+        </div>
+        <div className="privacy-policy4">Privacy Policy</div>
+        <div className="disclaimer4">Disclaimer</div>
+        <div className="contact-us8" onClick={onContactUsTextClick}>
+          Contact us
+        </div>
+        <div className="help4">Help</div>
+        <div className="copyright-20184">
+          Copyright © 2024 • Baisiyou Ink Inc.
+        </div>
+        <div className="information4">
+          <div className="social4">
+            <img
+              className="youtube-color1-icon4"
+              alt=""
+              src="/youtube-color1@2x.png"
+            />
+            <img
+              className="instagram-black1-icon4"
+              alt=""
+              src="/instagram-black1@2x.png"
+            />
+            <img
+              className="googleplus-black1-icon4"
+              alt=""
+              src="/googleplus-black1@2x.png"
+            />
+            <img
+              className="linkedin-black1-icon4"
+              alt=""
+              src="/linkedin-black1@2x.png"
+            />
+            <img className="social-child1" alt="" src="/group-29@2x.png" />
+            <div className="twitter-black14">
+              <div className="rectangle58" />
+              <img className="twitter-icon4" alt="" src="/twitter.svg" />
+            </div>
+            <div className="social-media4">Social Media</div>
+          </div>
+          <div className="location4">
+            <div className="faulconer-drive4">
+              345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
+            </div>
+            <img
+              className="round-place-24px-icon4"
+              alt=""
+              src="/roundplace24px@2x.png"
+            />
+          </div>
+          <div className="phone4">
+            <div className="div12">(123) 456-7890</div>
+            <img
+              className="round-phone-24px-icon4"
+              alt=""
+              src="/roundphone24px.svg"
+            />
+          </div>
+          <div className="fax4">
+            <div className="div13">(123) 456-7890</div>
+            <img
+              className="round-local-printshop-24px-icon4"
+              alt=""
+              src="/roundlocalprintshop24px@2x.png"
+            />
+          </div>
+        </div>
+        <div className="footer-ui-child7" />
+        <img className="logo-lift-icon4" alt="" src="/logo-lift.svg" />
+      </div>
+      <div className="component-54">
+        <img className="image-1-icon5" alt="" src="/image-1@2x.png" />
+        <div className="baisiyou-ink4">Baisiyou Ink</div>
+        <div className="home5">Home</div>
+        <div className="about-us10" onClick={onAboutUsText2Click}>
+          About Us
+        </div>
+        <div className="paste5">Paste</div>
+        <div className="ink5" onClick={onInkTextClick}>
+          Ink
+        </div>
+        <div className="refills4" onClick={onRefillsTextClick}>
+          Refills
+        </div>
+        <div className="pen5" onClick={onPenTextClick}>
+          Pen
+        </div>
+        <div className="contact-us9">Contact Us</div>
+        <div className="cart4">Cart</div>
+        <div className="en4">En</div>
+        <div className="div14">中</div>
+        <img className="shopping-cart-icon3" alt="" src="/shoppingcart.svg" />
+        <div className="product4">Product</div>
+        <div className="fr4">Fr</div>
+        <div className="comment4">Comment</div>
       </div>
     </div>
   );
