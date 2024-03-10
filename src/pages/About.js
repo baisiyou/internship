@@ -1,8 +1,15 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
-
+import { useTranslation } from 'react-i18next';
+import { Suspense, useState } from 'react';
+const locales = {
+  en: { title: 'English' },
+  zh: { title: '中文' },
+  fr: { title: 'Français' },
+};
 const About = () => {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   const onRectangleImageClick = useCallback(() => {
@@ -24,7 +31,9 @@ const About = () => {
   const onAboutUsTextClick = useCallback(() => {
     navigate("/about");
   }, [navigate]);
-
+  const onProductTextClick = useCallback(() => {
+    navigate("/shop");
+  }, [navigate]);
   const onContactUsTextClick = useCallback(() => {
     navigate("/login");
   }, [navigate]);
@@ -248,31 +257,46 @@ const About = () => {
       </div>
       <div className="component-53">
         <img className="image-1-icon3" alt="" src="/image-1@2x.png" />
-        <div className="baisiyou-ink3">Baisiyou Ink</div>
-        <div className="home4" onClick={onHomeTextClick} style={{ cursor: 'pointer' }}>Home</div>
+        <div className="baisiyou-ink3">{t('baisiyou_ink')}</div>
+        <div className="home4" onClick={onHomeTextClick} style={{ cursor: 'pointer' }}>{t('home')}</div>
         <div className="about-us8" onClick={onAboutUsText2Click}>
-          About Us
+          {t('About us')}
         </div>
-        <div className="paste3">Paste</div>
+        <div className="paste3">{t('paste')}</div>
         <div className="ink4" onClick={onInkTextClick}>
-          Ink
+        {t('ink')}
         </div>
         <div className="refills3" onClick={onRefillsTextClick}>
-          Refills
+        {t('refills')}
         </div>
         <div className="pen4" onClick={onPenTextClick}>
-          Pen
+        {t('pen')}
         </div>
         <div className="contact-us7" onClick={onContactUsText2Click}>
-          Contact Us
+        {t('contact_us')}
         </div>
-        <div className="cart3">Cart</div>
+        <div className="cart3">{t('cart')}</div>
+        <div className="en">En</div>
+      <div className="div2">中</div>
+      <img className="vector-icon" alt="" src="/vector.svg" />
+      <div className="fr">Fr</div>
+      <div style={{ position: 'absolute', top: '0.7%', left: '55%', width: '35%', backgroundColor: '#F3FAF8', padding: '10px 0', zIndex: '999' }}>
+  <ul style={{ margin: '0', padding: '0', listStyleType: 'none', textAlign: 'center' }}>
+    {Object.keys(locales).map((locale) => (
+      <li key={locale} style={{ display: 'inline-block', margin: '0 10px' }}>
+        <button style={{ fontWeight: i18n.resolvedLanguage === locale ? 'bold' : 'normal',fontSize: 'large' }} type="submit" onClick={() => i18n.changeLanguage(locale)}>
+          {locales[locale].title}
+        </button>
+      </li>
+    ))}
+  </ul>
+</div>
         <div className="en3">En</div>
         <div className="div11">中</div>
         <img className="shopping-cart-icon2" alt="" src="/shoppingcart.svg" />
-        <div className="product3">Product</div>
+        <div className="product3" onClick={onProductTextClick} style={{ cursor: 'pointer' }}>{t('product')}</div>
         <div className="fr3">Fr</div>
-        <div className="comment3">Comment</div>
+        <div className="comment3">{t('comment')}</div>
       </div>
     </div>
   );

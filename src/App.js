@@ -1,33 +1,26 @@
 import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Pen from "./pages/Pen";
 import Ink1 from "./pages/Ink1";
 import About from "./pages/About";
 import Paste from "./pages/Paste";
 import Refill from "./pages/Refill";
-import Login from "./pages/Login";
+import Login1 from "./pages/Login";
 import { Navbar } from "./components/navbar";
-import {Shop} from "./pages/shop";
+import { Shop } from "./pages/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart";
 import { ShopContextProvider } from "./context/shop-context";
+import { AuthProvider } from "./context/authContext";
+import Header from "./components/header";
+import Home1 from "./components/home";
+import Login from "./components/auth/login";
+import Register from "./components/auth/register";
 
 function App() {
-  const action = useNavigationType();
   const location = useLocation();
   const pathname = location.pathname;
-
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
 
   useEffect(() => {
     let title = "";
@@ -62,6 +55,8 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      default:
+        break;
     }
 
     if (title) {
@@ -80,21 +75,88 @@ function App() {
 
   return (
     <div className="App">
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/pen" element={<Pen />} />
-      <Route path="/ink" element={<Ink1 />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/paste" element={<Paste />} />
-      <Route path="/shop" element={<ShopContextProvider><Navbar /><Shop /></ShopContextProvider>} />
-      <Route path="/contact" element={<ShopContextProvider><Navbar /><Contact /></ShopContextProvider>} />
-      <Route path="/cart" element={<ShopContextProvider><Navbar /><Cart /></ShopContextProvider>} />
-      <Route path="/refill" element={<ShopContextProvider><Navbar /><Refill /></ShopContextProvider>} />
-      <Route path="/login" element={<ShopContextProvider><Navbar /><Login /></ShopContextProvider>} />
-    </Routes>
+      <AuthProvider>
+        <Header />
+        <div className="w-full h-screen flex flex-col">
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/pen" element={<Pen />} />
+            <Route path="/ink" element={<Ink1 />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/paste" element={<Paste />} />
+            <Route
+              path="/shop"
+              element={
+                <ShopContextProvider>
+                  <Navbar />
+                  <Shop />
+                </ShopContextProvider>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <ShopContextProvider>
+                  <Navbar />
+                  <Contact />
+                </ShopContextProvider>
+              }
+            />
+            <Route
+              path="/cart"
+              element={
+                <ShopContextProvider>
+                  <Navbar />
+                  <Cart />
+                </ShopContextProvider>
+              }
+            />
+            <Route
+              path="/refill"
+              element={
+                <ShopContextProvider>
+                  <Navbar />
+                  <Refill />
+                </ShopContextProvider>
+              }
+            />
+            <Route
+  path="/login"
+  element={
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      height: '100vh', 
+    }}>
+      <Login className="text-red-800 text-xl font-semibold sm:text-2xl" />
+    </div>
+  }
+/>
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start=]', height: '100vh' }}>
+    <Login />
   </div>
-  
+} />
+            <Route path="/register" element={
+    <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        height: '100vh'
+    }}>
+        <Register />
+    </div>
+} />
+
+            
+          </Routes>
+        </div>
+      </AuthProvider>
+    </div>
   );
-  
 }
+
 export default App;
+

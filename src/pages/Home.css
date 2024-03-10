@@ -72,7 +72,7 @@
   position: absolute;
   top: calc(50% - 1540px);
   left: calc(50% - 135.5px);
-  width: 762px;
+  width: 730px;
   height: 258px;
   object-fit: cover;
 }
@@ -101,7 +101,7 @@
 .home-child2 {
   top: calc(50% - 1262px);
   left: calc(50% + 318.5px);
-  width: 255px;
+  width: 269px;
   height: 162px;
 }
 .attractive-erasable-pen {
@@ -330,7 +330,7 @@
 .thermosensitive-micro-encapsul {
   top: calc(50% + 1185px);
   left: calc(50% - 560.5px);
-  font-size: var(--font-size-17xl);
+  font-size: var(--font-size-16xl);
   letter-spacing: 0.2px;
   line-height: 49.5px;
   color: var(--color-slateblue-100);
@@ -339,7 +339,7 @@
   position: absolute;
   top: calc(50% + 1176px);
   left: calc(50% + 85.5px);
-  width: 544px;
+  width: 522px;
   height: 598px;
   object-fit: cover;
 }

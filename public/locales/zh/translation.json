@@ -1,0 +1,39 @@
+{
+  "thermosensitiveInk": "由于其易于擦除的能力，热敏墨水备受追捧。",
+  "thermosensitiveInkDescription": "当暴露于超过140°F（60°C）的温度时，这种墨水会发生显著变化，变得透明，从而使标记看起来被擦除。",
+  "thermosensitiveInkDescription1": "热敏墨水是最受欢迎和可靠的墨水之一，可以被擦除。当温度超过140°F（60°C）时，墨水会发生反应并变得透明，使您的标记看起来像是被擦除了一样。由于其对热的反应性，当温度降至-15°C以下时，墨水可能会重新出现。由于这种墨水对热敏感，最好将笔和书写远离过热或过冷的温度，以防止不必要的颜色变化。",
+  "thermochromicMicrocapsuleInk": "热致变色微胶囊墨水",
+  "microEncapsulatedThermosensitiveInkDescription":"我们的微胶囊热敏墨水采用聚氨酯涂层配方，不含甲醛。其颜色变化温度范围为-15到60°C。当温度超过60°C时，墨水会消失，通过简单的摩擦加热，如擦拭，可以轻松擦除。擦除的区域可以根据需要重写和重复擦除。然而，由于其对温度的反应性质，当温度降至-15°C以下时，墨水可能会重新出现。为了防止意外消失，建议避免将墨水放置在高温环境中或使其受到激烈摩擦。此外，我们建议不要在页面的背面书写，因为热量可能传递，导致意外擦除。",
+  "thermosensitiveMicroEncapsulatedInk":"热敏微胶囊墨水",
+  "the_reversible_thermochromic": "可逆热变色组合包括一个电子供体有机化合物（A）、一个电子受体化合物（B）和一个反应介质（C）的溶解混合物，促进它们在定义的温度范围内进行可逆电子交换。在超过 60°C 的温度下，墨水会褪色，而在温度低于 -15°C 时颜色会发展出来。用坚硬的橡皮擦拭墨水会通过摩擦产生热量，导致温度敏感化合物减少，有效地使墨水消失！",
+  "Given_its_sensitivity": "鉴于其对温度的敏感性，建议将笔存放在避免极端高温或低温环境中，并避免在此类环境中书写，以防止意外的颜色变化。",
+  "Erasable_Properties":"可擦除特性",
+  "Cautions": "注意事项：我们建议在使用这些笔时不要在纸张的反面书写，因为可能会发生热传导，导致意外擦除。",
+  "Available_Temperatures": "可用温度",
+  "About us": "关于我们",
+  "home": "首页",
+  
+    "paste": "色浆",
+    "ink": "墨水",
+    "refills": "笔芯",
+    "pen": "笔",
+    "contact_us": "联系我们",
+    "product": "产品",
+    "comment": "评论",
+    "cart": "购物车",
+    "attractive_erasable_pen": "迷人的可擦笔",
+    "magic_erasable_ink": "神奇的可擦墨水",
+    "contact us": "联系我们",
+    "help": "帮助",
+    "privacy_policy": "隐私政策",
+    "disclaimer": "免责声明",
+    "baisiyou_ink_inc": "柏斯优墨水有限公司",
+    "product_features": "产品特性",
+    "temperature_reactivity": "温度反应性",
+    "temperature_sensitivity": "温度敏感性",
+    "baisiyou_ink": "百思优墨水"
+    
+
+  }
+
+  
