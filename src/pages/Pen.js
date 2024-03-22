@@ -43,7 +43,9 @@ const Pen = () => {
   const onRefillsTextClick = useCallback(() => {
     navigate("/refill");
   }, [navigate]);
-
+  const onPasteTextClick = useCallback(() => {
+    navigate("/paste");
+  }, [navigate]);
   const onPenTextClick = useCallback(() => {
     navigate("/pen");
   }, [navigate]);
@@ -197,7 +199,7 @@ const Pen = () => {
         <div className="about-us4" onClick={onAboutUsText2Click}>
           About Us
         </div>
-        <div className="paste1">Paste</div>
+        <div className="paste1" onClick={onPasteTextClick} style={{ cursor: 'pointer' }}>Paste</div>
         <div className="ink1" onClick={onInkTextClick}>
           Ink
         </div>
