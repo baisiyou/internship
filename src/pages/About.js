@@ -37,7 +37,9 @@ const About = () => {
   const onContactUsTextClick = useCallback(() => {
     navigate("/login");
   }, [navigate]);
-
+  const onCartText2Click = useCallback(() => {
+    navigate("/cart");
+  }, [navigate]);
   const onAboutUsText2Click = useCallback(() => {
     navigate("/about");
   }, [navigate]);
@@ -53,11 +55,15 @@ const About = () => {
   const onPenTextClick = useCallback(() => {
     navigate("/pen");
   }, [navigate]);
-
+  const onCommentTextClick = useCallback(() => {
+    navigate("/crud-app");
+  }, [navigate]);
   const onContactUsText2Click = useCallback(() => {
     navigate("/login");
   }, [navigate]);
-
+  const onPasteTextClick = useCallback(() => {
+    navigate("/paste");
+  }, [navigate]);
   return (
     <div className="about">
       <div className="about-child" />
@@ -262,20 +268,20 @@ const About = () => {
         <div className="about-us8" onClick={onAboutUsText2Click}>
           {t('About us')}
         </div>
-        <div className="paste3">{t('paste')}</div>
-        <div className="ink4" onClick={onInkTextClick}>
+        <div className="paste3" onClick={onPasteTextClick} style={{ cursor: 'pointer' }}>{t('paste')}</div>
+        <div className="ink4" onClick={onInkTextClick} style={{ cursor: 'pointer' }}>
         {t('ink')}
         </div>
-        <div className="refills3" onClick={onRefillsTextClick}>
+        <div className="refills3" onClick={onRefillsTextClick} style={{ cursor: 'pointer' }}>
         {t('refills')}
         </div>
-        <div className="pen4" onClick={onPenTextClick}>
+        <div className="pen4" onClick={onPenTextClick} style={{ cursor: 'pointer' }}>
         {t('pen')}
         </div>
-        <div className="contact-us7" onClick={onContactUsText2Click}>
+        <div className="contact-us7" onClick={onContactUsText2Click} style={{ cursor: 'pointer' }}>
         {t('contact_us')}
         </div>
-        <div className="cart3">{t('cart')}</div>
+        <div className="cart3" onClick={onCartText2Click} style={{ cursor: 'pointer' }}>{t('cart')}</div>
         <div className="en">En</div>
       <div className="div2">中</div>
       <img className="vector-icon" alt="" src="/vector.svg" />
@@ -296,7 +302,7 @@ const About = () => {
         <img className="shopping-cart-icon2" alt="" src="/shoppingcart.svg" />
         <div className="product3" onClick={onProductTextClick} style={{ cursor: 'pointer' }}>{t('product')}</div>
         <div className="fr3">Fr</div>
-        <div className="comment3">{t('comment')}</div>
+        <div className="comment3"onClick={onCommentTextClick} style={{ cursor: 'pointer' }} >{t('Admin')}</div>
       </div>
     </div>
   );

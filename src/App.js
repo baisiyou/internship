@@ -6,7 +6,7 @@ import Ink1 from "./pages/Ink1";
 import About from "./pages/About";
 import Paste from "./pages/Paste";
 import Refill from "./pages/Refill";
-import Login1 from "./pages/Login";
+import Contactus from "./pages/Contactus";
 import { Navbar } from "./components/navbar";
 import { Shop } from "./pages/shop";
 import { Contact } from "./pages/contact";
@@ -17,7 +17,10 @@ import Header from "./components/header";
 import Home1 from "./components/home";
 import Login from "./components/auth/login";
 import Register from "./components/auth/register";
-
+import Login1 from './components/Login';
+import Logout from './components/Logout';
+import App1 from './components/App';
+import Dashboard from './components/Dashboard';
 function App() {
   const location = useLocation();
   const pathname = location.pathname;
@@ -84,6 +87,11 @@ function App() {
             <Route path="/ink" element={<Ink1 />} />
             <Route path="/about" element={<About />} />
             <Route path="/paste" element={<Paste />} />
+            <Route path="/crud-app" element={<Dashboard />} />
+            <Route path="/home" element={<Login1 />} />
+            <Route path="/contactus" element={<Contactus />} />
+            <Route path="/home" element={<Logout />} />
+            <Route path="/home" element={<App1 />} />
             <Route
               path="/shop"
               element={

@@ -40,11 +40,15 @@ const Home = () => {
   const onAboutUsTextClick = useCallback(() => {
     navigate("/about");
   }, [navigate]);
-
-  const onContactUsTextClick = useCallback(() => {
-    navigate("/login");
+  const onCartTextClick = useCallback(() => {
+    navigate("/cart");
   }, [navigate]);
-
+  const onCommentTextClick = useCallback(() => {
+    navigate("/crud-app");
+  }, [navigate]);
+  const onContactusTextClick = useCallback(() => {
+    navigate("/contactus");
+  }, [navigate]);
   const onAboutUsText2Click = useCallback(() => {
     navigate("/about");
   }, [navigate]);
@@ -64,8 +68,8 @@ const Home = () => {
     navigate("/pen");
   }, [navigate]);
 
-  const onContactUsText2Click = useCallback(() => {
-    navigate("/login");
+  const onContactus2TextClick = useCallback(() => {
+    navigate("/contactus");
   }, [navigate]);
   const onProductText2Click = useCallback(() => {
     navigate("/shop");
@@ -167,12 +171,12 @@ const Home = () => {
       <div className="rectangle-div" />
       <div className="footer-ui">
         <div className="footer-ui-child" />
-        <div className="about-us" onClick={onAboutUsTextClick}>
+        <div className="about-us" onClick={onAboutUsTextClick} style={{ cursor: 'pointer' }}>
           {t('About us')}
         </div>
         <div className="privacy-policy">{t('privacy_policy')}</div>
         <div className="disclaimer">{t('disclaimer')}</div>
-        <div className="contact-us" onClick={onContactUsTextClick}>
+        <div className="contact-us" onClick={onContactusTextClick} style={{ cursor: 'pointer' }}>
         {t('contact us')}
         </div>
         <div className="help">{t('help')}</div>
@@ -242,13 +246,13 @@ const Home = () => {
       <img className="image-1-icon" alt="" src="/image-1@2x.png" />
       <div className="baisiyou-ink">Baisiyou Ink</div>
       
-      <div className="cart">{t('cart')}</div>
+      <div className="cart" onClick={onCartTextClick} style={{ cursor: 'pointer' }}>{t('cart')}</div>
       
       <div className="en">En</div>
       <div className="div2">中</div>
       <img className="vector-icon" alt="" src="/vector.svg" />
       <div className="fr">Fr</div>
-      <div style={{ position: 'absolute', top: '0.7%', left: '54%', width: '15%', backgroundColor: '#F3FAF8', padding: '10px 0', zIndex: '999' }}>
+      <div style={{ position: 'absolute', top: '0.7%', left: '52%', width: '20%', backgroundColor: '#F3FAF8', padding: '10px 0px', zIndex: '999' }}>
   <ul style={{ margin: '0', padding: '0', listStyleType: 'none', textAlign: 'center' }}>
     {Object.keys(locales).map((locale) => (
       <li key={locale} style={{ display: 'inline-block', margin: '0 10px' }}>
@@ -275,11 +279,12 @@ const Home = () => {
       <div className="pen" onClick={onPenTextClick}>
         {t('pen')}
       </div>
-      <div className="contact-us1" onClick={onContactUsText2Click}>
+      
+      <div className="contact-us1" onClick={onContactus2TextClick} style={{ cursor: 'pointer' }}>
       {t('contact_us')}
       </div>
       <div className="product-2" onClick={onProductText2Click} style={{ cursor: 'pointer' }}>{t('product')}</div>
-      <div className="comment">{t('comment')}</div>
+      <div className="comment" onClick={onCommentTextClick} style={{ cursor: 'pointer' }}>{t('Admin')}</div>
     </div></>
   );
 };

@@ -37,7 +37,9 @@ const Pen = () => {
   const onInkTextClick = useCallback(() => {
     navigate("/ink");
   }, [navigate]);
-
+  const onProductText2Click = useCallback(() => {
+    navigate("/shop");
+  }, [navigate]);
   const onRefillsTextClick = useCallback(() => {
     navigate("/refill");
   }, [navigate]);
@@ -45,9 +47,11 @@ const Pen = () => {
   const onPenTextClick = useCallback(() => {
     navigate("/pen");
   }, [navigate]);
-
+  const onCartText2Click = useCallback(() => {
+    navigate("/cart");
+  }, [navigate]);
   const onContactUsText2Click = useCallback(() => {
-    navigate("/login");
+    navigate("/contactus");
   }, [navigate]);
 
   return (
@@ -206,13 +210,13 @@ const Pen = () => {
         <div className="contact-us3" onClick={onContactUsText2Click}>
           Contact Us
         </div>
-        <div className="cart1">Cart</div>
+        <div className="cart1" onClick={onCartText2Click} style={{ cursor: 'pointer' }}>Cart</div>
         <div className="en1">En</div>
         <div className="div5">中</div>
         <img className="shopping-cart-icon" alt="" src="/shoppingcart.svg" />
-        <div className="product1">Product</div>
+        <div className="product1" onClick={onProductText2Click} style={{ cursor: 'pointer' }}>Product</div>
         <div className="fr1">Fr</div>
-        <div className="comment1">Comment</div>
+        <div className="comment1">Admin</div>
       </div>
     </div>
   );

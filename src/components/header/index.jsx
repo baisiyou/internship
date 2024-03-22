@@ -25,7 +25,8 @@ const Header = () => {
         cursor: 'pointer',
         border: 'none',
         background: 'none',
-        padding: 0
+        padding: 0,
+        marginLeft:'20px'
     }}
 >
     Logout

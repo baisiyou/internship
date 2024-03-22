@@ -4,6 +4,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "./global.css";
+import './index.css';
+
 import './pages/i18n';
 
 const container = document.getElementById("root");

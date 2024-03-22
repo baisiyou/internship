@@ -30,7 +30,9 @@ const Refill = () => {
   const onBaisiyouInkTextClick = useCallback(() => {
     navigate("/");
   }, [navigate]);
-
+  const onHomeTextClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
   const onAboutUsText2Click = useCallback(() => {
     navigate("/about");
   }, [navigate]);
@@ -38,17 +40,29 @@ const Refill = () => {
   const onInkTextClick = useCallback(() => {
     navigate("/ink");
   }, [navigate]);
-
+  const onPasteTextClick = useCallback(() => {
+    navigate("/paste");
+  }, [navigate]);
   const onRefillsTextClick = useCallback(() => {
     navigate("/refill");
   }, [navigate]);
-
+  const onCartTextClick = useCallback(() => {
+    navigate("/cart");
+  }, [navigate]);
+  const onCommentTextClick = useCallback(() => {
+    navigate("/crud-app");
+  }, [navigate]);
+  const onContactusTextClick = useCallback(() => {
+    navigate("/contactus");
+  }, [navigate]);
   const onPenTextClick = useCallback(() => {
     navigate("/pen");
   }, [navigate]);
-
+  const onProductText2Click = useCallback(() => {
+    navigate("/shop");
+  }, [navigate]);
   const onContactUsText2Click = useCallback(() => {
-    navigate("/login");
+    navigate("/contactus");
   }, [navigate]);
 
   return (
@@ -202,11 +216,11 @@ const Refill = () => {
           <div className="baisiyou-ink5" onClick={onBaisiyouInkTextClick}>
             Baisiyou Ink
           </div>
-          <div className="home6">Home</div>
+          <div className="home6" onClick={onHomeTextClick} style={{ cursor: 'pointer' }}>Home</div>
           <div className="about-us12" onClick={onAboutUsText2Click}>
             About Us
           </div>
-          <div className="paste6">Paste</div>
+          <div className="paste6" onClick={onPasteTextClick} style={{ cursor: 'pointer' }}>Paste</div>
           <div className="ink6" onClick={onInkTextClick}>
             Ink
           </div>
@@ -219,13 +233,13 @@ const Refill = () => {
           <div className="contact-us11" onClick={onContactUsText2Click}>
             Contact Us
           </div>
-          <div className="cart5">Cart</div>
+          <div className="cart5" onClick={onCartTextClick} style={{ cursor: 'pointer' }}>Cart</div>
           <div className="en5">En</div>
           <div className="div17">中</div>
           <img className="shopping-cart-icon4" alt="" src="/shoppingcart.svg" />
-          <div className="product5">Product</div>
+          <div className="product5" onClick={onProductText2Click} style={{ cursor: 'pointer' }}>Product</div>
           <div className="fr5">Fr</div>
-          <div className="comment5">Comment</div>
+          <div className="comment5" onClick={onCommentTextClick} style={{ cursor: 'pointer' }}>Admin</div>
         </div>
       </div>
     </div>

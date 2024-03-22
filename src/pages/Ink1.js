@@ -28,11 +28,21 @@ const Ink1 = () => {
   const onPenTextClick = useCallback(() => {
     navigate("/pen");
   }, [navigate]);
-
-  const onContactUsText2Click = useCallback(() => {
-    navigate("/login");
+  const onCartTextClick = useCallback(() => {
+    navigate("/cart");
   }, [navigate]);
-
+  const onContactUsText2Click = useCallback(() => {
+    navigate("/contactus");
+  }, [navigate]);
+  const onCommentTextClick = useCallback(() => {
+    navigate("/crud-app");
+  }, [navigate]);
+  const onContactusTextClick = useCallback(() => {
+    navigate("/contactus");
+  }, [navigate]);
+  const onProductText2Click = useCallback(() => {
+    navigate("/shop");
+  }, [navigate]);
   const onRectangleImageClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='rectangleImage1']");
     if (anchor) {
@@ -228,23 +238,24 @@ const Ink1 = () => {
             About Us
           </div>
           <div className="paste2" onClick={onPasteTextClick} style={{ cursor: 'pointer' }}>Paste</div>
-          <div className="ink3">Ink</div>
-          <div className="refills2" onClick={onRefillsTextClick}>
+          <div className="ink3" onClick={onInkTextClick} style={{ cursor: 'pointer' }}>Ink</div>
+          <div className="refills2" onClick={onRefillsTextClick} style={{ cursor: 'pointer' }}>
             Refills
           </div>
-          <div className="pen3" onClick={onPenTextClick}>
+          <div className="pen3" onClick={onPenTextClick} style={{ cursor: 'pointer' }}>
             Pen
           </div>
-          <div className="contact-us5" onClick={onContactUsText2Click}>
+          <div className="contact-us5" onClick={onContactUsText2Click} style={{ cursor: 'pointer' }}>
             Contact Us
           </div>
-          <div className="cart2">Cart</div>
+          <div className="cart2" onClick={onCartTextClick} style={{ cursor: 'pointer' }}>Cart</div>
           <div className="en2">En</div>
           <div className="div8">中</div>
           <img className="shopping-cart-icon1" alt="" src="/shoppingcart.svg" />
-          <div className="product2">Product</div>
+          <div className="product2" onClick={onProductText2Click} style={{ cursor: 'pointer' }}>Product</div>
           <div className="fr2">Fr</div>
-          <div className="comment2">Comment</div>
+          <div className="comment2"onClick={onCommentTextClick} style={{ cursor: 'pointer' }} >Admin</div>
+          
         </div>
       </div>
       <div className="rectangle-container">

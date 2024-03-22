@@ -80,7 +80,7 @@ const Login = () => {
           <img className="shopping-cart-icon5" alt="" src="/shoppingcart.svg" />
           <div className="product6">Product</div>
           <div className="fr6">Fr</div>
-          <div className="comment6">Comment</div>
+          <div className="comment6">Admin</div>
         </div>
       </div>
     </div>

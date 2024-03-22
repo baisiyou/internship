@@ -25,6 +25,7 @@ export const Shop = () => {
             <button
               className="addToCartBttn"
               onClick={() => addToCart(product.id)}
+              style={{ color: "lightblue" }}
             >
               Add To Cart {cartItems[product.id] > 0 && `(${cartItems[product.id]})`}
             </button>

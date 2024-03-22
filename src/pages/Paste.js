@@ -4,14 +4,18 @@ import "./Paste.css";
 
 const Paste = () => {
   const navigate = useNavigate();
-
+  const onHomeTextClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
   const onRectangleImageClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='rectangleImage1']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
-
+  const onProductText2Click = useCallback(() => {
+    navigate("/shop");
+  }, [navigate]);
   const onRectangleImage1Click = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='rectangleImage']");
     if (anchor) {
@@ -26,7 +30,9 @@ const Paste = () => {
   const onContactUsTextClick = useCallback(() => {
     navigate("/login");
   }, [navigate]);
-
+  const onCommentTextClick = useCallback(() => {
+    navigate("/crud-app");
+  }, [navigate]);
   const onAboutUsText2Click = useCallback(() => {
     navigate("/about");
   }, [navigate]);
@@ -41,6 +47,14 @@ const Paste = () => {
 
   const onPenTextClick = useCallback(() => {
     navigate("/pen");
+  }, [navigate]);
+
+  const onPasteTextClick = useCallback(() => {
+    navigate("/paste");
+  }, [navigate]);
+
+  const onCartText2Click = useCallback(() => {
+    navigate("/cart");
   }, [navigate]);
 
   return (
@@ -175,28 +189,28 @@ const Paste = () => {
       <div className="component-54">
         <img className="image-1-icon5" alt="" src="/image-1@2x.png" />
         <div className="baisiyou-ink4">Baisiyou Ink</div>
-        <div className="home5">Home</div>
-        <div className="about-us10" onClick={onAboutUsText2Click}>
+        <div className="home5" onClick={onHomeTextClick} style={{ cursor: 'pointer' }}>Home</div>
+        <div className="about-us10" onClick={onAboutUsText2Click} style={{ cursor: 'pointer' }}>
           About Us
         </div>
-        <div className="paste5">Paste</div>
-        <div className="ink5" onClick={onInkTextClick}>
+        <div className="paste5" onClick={onPasteTextClick} style={{ cursor: 'pointer' }}>Paste</div>
+        <div className="ink5" onClick={onInkTextClick} style={{ cursor: 'pointer' }}>
           Ink
         </div>
-        <div className="refills4" onClick={onRefillsTextClick}>
+        <div className="refills4" onClick={onRefillsTextClick} style={{ cursor: 'pointer' }}>
           Refills
         </div>
-        <div className="pen5" onClick={onPenTextClick}>
+        <div className="pen5" onClick={onPenTextClick} style={{ cursor: 'pointer' }}>
           Pen
         </div>
-        <div className="contact-us9">Contact Us</div>
-        <div className="cart4">Cart</div>
+        <div className="contact-us9" onClick={onAboutUsText2Click} style={{ cursor: 'pointer' }}>Contact Us</div>
+        <div className="cart4" onClick={onCartText2Click} style={{ cursor: 'pointer' }}>Cart</div>
         <div className="en4">En</div>
         <div className="div14">中</div>
         <img className="shopping-cart-icon3" alt="" src="/shoppingcart.svg" />
-        <div className="product4">Product</div>
+        <div className="product4" onClick={onProductText2Click} style={{ cursor: 'pointer' }}>Product</div>
         <div className="fr4">Fr</div>
-        <div className="comment4">Comment</div>
+        <div className="comment4" onClick={onCommentTextClick} style={{ cursor: 'pointer' }}>Admin</div>
       </div>
     </div>
   );
