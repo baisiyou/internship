@@ -248,10 +248,10 @@ const Home = () => {
       
       <div className="cart" onClick={onCartTextClick} style={{ cursor: 'pointer' }}>{t('cart')}</div>
       
-      <div className="en">En</div>
-      <div className="div2">中</div>
+      <div className="en"></div>
+      <div className="div2"></div>
       <img className="vector-icon" alt="" src="/vector.svg" />
-      <div className="fr">Fr</div>
+      <div className="fr"></div>
       <div style={{ position: 'absolute', top: '0.7%', left: '55%', width: '20%', backgroundColor: '#F3FAF8', padding: '10px 0px', zIndex: '999', display: 'flex', justifyContent: 'center' }}>
   {Object.keys(locales).map((locale) => (
     <button key={locale} style={{ 
