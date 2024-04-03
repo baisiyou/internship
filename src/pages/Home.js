@@ -252,16 +252,18 @@ const Home = () => {
       <div className="div2">中</div>
       <img className="vector-icon" alt="" src="/vector.svg" />
       <div className="fr">Fr</div>
-      <div style={{ position: 'absolute', top: '0.7%', left: '51%', width: '20%', backgroundColor: '#F3FAF8', padding: '10px 0px', zIndex: '999' }}>
-  <ul style={{ margin: '0', padding: '0', listStyleType: 'none', textAlign: 'center' }}>
-    {Object.keys(locales).map((locale) => (
-      <li key={locale} style={{ display: 'inline-block', margin: '0 10px' }}>
-        <button style={{ fontWeight: i18n.resolvedLanguage === locale ? 'bold' : 'normal',fontSize: 'large' }} type="submit" onClick={() => i18n.changeLanguage(locale)}>
-          {locales[locale].title}
-        </button>
-      </li>
-    ))}
-  </ul>
+      <div style={{ position: 'absolute', top: '0.7%', left: '55%', width: '20%', backgroundColor: '#F3FAF8', padding: '10px 0px', zIndex: '999', display: 'flex', justifyContent: 'center' }}>
+  {Object.keys(locales).map((locale) => (
+    <button key={locale} style={{ 
+      fontWeight: i18n.resolvedLanguage === locale ? 'bold' : 'normal',
+      fontSize: 'large',
+      margin: '0 10px' // Added margin between buttons
+    }} 
+    type="submit" 
+    onClick={() => i18n.changeLanguage(locale)}>
+      {locales[locale].title}
+    </button>
+  ))}
 </div>
 
 
