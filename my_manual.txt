@@ -1,0 +1,28 @@
+1. Introduction and Overall Description
+This project is a web-based application built on Firebase and Node.js, and comes with cart functionality. The application facilitates the management of items in a shopping cart and provides essential features like adding, removing, and updating cart items.
+2. System Installation
+2.1 Prerequisites
+Ensure that both Node.js and npm are installed on your machine.
+2.2 Installation Procedure
+Clone the repository with the following command:
+git clone https://github.com/baisiyou/internship.git
+Navigate to the project directory:
+cd your-repository
+Install the project dependencies using npm:
+npm install
+3. System Configuration
+As Firebase powers the backend of this project, Firebase credentials are required. Navigate to and edit the firebase-config.json file in the project directory. Substitute the placeholders accordingly with your Firebase administrative credentials.
+4. Using the System
+Upon completion of the dependencies and Firebase configuration, use the following command to run the project: npm start. This command enables the system and makes it accessible via your browser.
+5. Internationalization (i18n)
+The project supports Internationalization (i18n) across multiple languages. Language files can be found in the locales directory. To add support for a new language, establish a new JSON file in this directory, adhering to the current format.
+6. System Authentication
+Employ the following credentials to authenticate Firebase admin functions:
+Email: 123456@gmail.com
+Password: 123456
+Maintain the security of these credentials and refrain from publicly sharing them.
+7. Cart Functionality
+From adding, removing to updating cart items, the application emits comprehensive shopping cart functionalities.
+8. Additional Information and Notes
+Ensure your Firebase project has the correct permissions and configurations to utilize admin functions. For issues or inquiries, please contact baisiyou@gmail.com.
+Finally, thank you for using my project! I welcome your feedback and suggestions and am grateful for your contribution.
